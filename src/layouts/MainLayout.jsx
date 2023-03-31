@@ -9,6 +9,7 @@ const MainLayout = () => {
           <nav>
             <h1>LendNU</h1>
             {/* Put profile here */}
+            {/* Put login here */}
           </nav>
         </header>
         <main>

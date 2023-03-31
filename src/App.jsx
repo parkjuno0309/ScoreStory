@@ -5,6 +5,8 @@ import FeedPage from './components/FeedPage';
 import MainLayout from './layouts/MainLayout';
 import PublishPage from './components/PublishPage';
 
+import { useDbData } from './utilities/firebase'; 
+
 import {
   createBrowserRouter, 
   createRoutesFromElements,
@@ -23,6 +25,13 @@ const router = createBrowserRouter(
 )
 
 const App = () => {
+
+  // const [data, error] = useDbData('/');
+  // if (data) {
+  //   alert("YES");
+  // } else {
+  //   alert("NO");
+  // }
 
   return (
     <RouterProvider router={router} />

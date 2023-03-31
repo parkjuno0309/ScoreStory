@@ -1,22 +1,6 @@
-import { useState } from 'react';
-import Post from './Post';
-import './FeedPage.css';
-import { useDbData } from '../utilities/firebase'; 
-
-const FeedPage = () => {
-    // get data from database by using useEffect
-    const [data, error] = useDbData('/');
-    // while (!data) {
-    //     return <h1>No</h1>
-    // }
-    // console.log(`data: ${data}`);
-    // if (data) {
-    //     alert(JSON.stringify(data.post1));
-    // } else {
-    //     alert("NO");
-    // }
-    // alert(JSON.stringify(data));
-    const examplePost = {
+{
+    "title": "Posts for lendNU",
+    "posts": {
         "post1": {
             "id": "post1",
             "name": "Alex Modugno",
@@ -82,21 +66,4 @@ const FeedPage = () => {
             "time": "5pm-6pm"
         }
     }
-
-    const [posts, setPosts] = useState(examplePost);
-    // information.name, .email, .item, .date, .time
-    return (
-        // <div class="feed-page">
-        //     {posts.map((post, id) => (
-        //         <Post postInfo={post} />
-        //     ))}
-        // </div>
-        <div className="feed-page">
-            {Object.entries(posts).map(([id, post]) => (
-                <Post postInfo={post} />
-            ))}
-        </div>
-    )
 }
-
-export default FeedPage;
