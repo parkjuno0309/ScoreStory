@@ -6,10 +6,10 @@ const Post = ({postInfo}) => {
     return (
         // replace with a Card from bootstrap instead
         <div className="post">
-            <div>
+            <div className="name-email">
                 {postInfo.name}, {postInfo.email}
             </div>
-            <div>
+            <div className="item">
                 {postInfo.item}
             </div>
             <div>

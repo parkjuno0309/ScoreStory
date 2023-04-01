@@ -8,10 +8,23 @@ const FeedPage = () => {
     if (error) return <div className="no-data">Error loading user data: {`${error}`}</div>;
     if (!data) return <div className="no-data">No user data found</div>;
 
-    const posts = data;
+    // reverse posts so that newest posts are displayed on top
+    let arrayPosts = [];
+    Object.entries(data).map(([id, post]) => {
+        arrayPosts.push({
+            "id": post.id,
+            "name": post.name,
+            "email": post.email,
+            "item": post.item,
+            "date": post.date,
+            "time": post.time
+        })
+    });
+    const reversedPosts = arrayPosts.reverse();
+
     return (
         <div className="feed-page">
-            {Object.entries(posts).map(([id, post]) => (
+            {Object.entries(reversedPosts).map(([id, post]) => (
                 <Post postInfo={post} key={post.id}/>
             ))}
         </div>
