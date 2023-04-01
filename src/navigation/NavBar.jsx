@@ -1,7 +1,7 @@
 import { Outlet, NavLink, ScrollRestoration } from "react-router-dom"
-import './MainLayout.css'
+import './NavBar.css'
 
-const MainLayout = () => {
+const NavBar = () => {
     return (
       <div className="main-layout">
         <ScrollRestoration />
@@ -19,10 +19,12 @@ const MainLayout = () => {
           <nav>
             <NavLink to="/">Feed</NavLink>
             <NavLink to="publishpage">Post</NavLink>
+            {/* Put profile here */}
+            {/* Put login here */}
           </nav>
         </footer>
       </div>
     )
   }
 
-  export default MainLayout;
+  export default NavBar;

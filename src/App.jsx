@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FeedPage from './components/FeedPage';
-import MainLayout from './layouts/MainLayout';
+import MainLayout from './navigation/NavBar';
 import PublishPage from './components/PublishPage';
 
 import { useDbData } from './utilities/firebase'; 
