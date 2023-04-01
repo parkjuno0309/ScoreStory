@@ -18,7 +18,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       {/* put more here */}
-      <Route index element={<FeedPage />} />
+      <Route index element={<FeedPage />}/>
       <Route path="publishpage" element={<PublishPage />} />
     </Route>
   )
@@ -27,6 +27,7 @@ const router = createBrowserRouter(
 const App = () => {
 
   // const [data, error] = useDbData('/');
+  // console.log(data);
   // if (data) {
   //   alert("YES");
   // } else {
