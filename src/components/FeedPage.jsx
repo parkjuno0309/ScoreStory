@@ -17,7 +17,8 @@ const FeedPage = () => {
             "email": post.email,
             "item": post.item,
             "date": post.date,
-            "time": post.time
+            "startTime": post.startTime,
+            "endTime": post.endTime
         })
     });
     const reversedPosts = arrayPosts.reverse();

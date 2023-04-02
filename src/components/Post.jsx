@@ -13,7 +13,7 @@ const Post = ({postInfo}) => {
                 {postInfo.item}
             </div>
             <div>
-                {postInfo.date}, {postInfo.time}
+                {postInfo.date}, {postInfo.startTime}-{postInfo.endTime}
             </div>
         </div>
     )

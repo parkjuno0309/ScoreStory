@@ -4,7 +4,7 @@ import './NavBar.css'
 const NavBar = () => {
     return (
       <div className="main-layout">
-        <ScrollRestoration />
+        {/* <ScrollRestoration /> */}
         <header>
           <nav>
             <h1>LendNU</h1>
