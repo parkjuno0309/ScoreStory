@@ -7,23 +7,26 @@
             "email": "AlexModugno2024@u.northwestern.edu",
             "item": "Calculator",
             "date": "3/3/23",
-            "time": "5pm-6pm"
+            "startTime": "5",
+            "endTime": "6"
         },
         "2": {
-            "id": "2",
-            "name": "Emily",
-            "email": "emily2024@u.northwestern.edu",
-            "item": "Toaster",
-            "date": "3/3/23",
-            "time": "5pm-6pm"
+          "id": "2",
+          "name": "Emily",
+          "email": "emily2024@u.northwestern.edu",
+          "item": "Toaster",
+          "date": "3/3/23",
+          "startTime": "5",
+          "endTime": "6"
         },
         "3": {
-            "id": "3",
-            "name": "Emily",
-            "email": "emily2024@u.northwestern.edu",
-            "item": "Toaster",
-            "date": "3/3/23",
-            "time": "5pm-6pm"
+          "id": "3",
+          "name": "Emily",
+          "email": "emily2024@u.northwestern.edu",
+          "item": "Toaster",
+          "date": "3/3/23",
+          "startTime": "5",
+          "endTime": "6"
         },
         "4": {
             "id": "4",

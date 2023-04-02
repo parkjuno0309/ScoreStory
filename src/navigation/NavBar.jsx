@@ -7,7 +7,7 @@ const NavBar = () => {
         {/* <ScrollRestoration /> */}
         <header>
           <nav>
-            <h1>LendNU</h1>
+            <h1 className="mx-auto">LendNU</h1>
             {/* Put profile here */}
             {/* Put login here */}
           </nav>
@@ -24,7 +24,7 @@ const NavBar = () => {
           </nav>
         </footer>
       </div>
-    )
+    );
   }
 
   export default NavBar;

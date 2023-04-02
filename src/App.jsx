@@ -4,6 +4,8 @@ import './App.css';
 import FeedPage from './components/FeedPage';
 import MainLayout from './navigation/NavBar';
 import PublishPage from './components/PublishPage';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { useDbData } from './utilities/firebase'; 
 

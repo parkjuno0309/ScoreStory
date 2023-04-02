@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Post.css';
 
+
 const Post = ({postInfo}) => {
     // information.name, .email, .item, .date, .time
     return (
