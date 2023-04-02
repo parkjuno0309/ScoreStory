@@ -4,7 +4,6 @@ import './NavBar.css'
 const NavBar = () => {
     return (
       <div className="main-layout">
-        {/* <ScrollRestoration /> */}
         <header>
           <nav>
             <h1 className="mx-auto">LendNU</h1>

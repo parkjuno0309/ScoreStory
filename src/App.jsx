@@ -9,24 +9,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { useDbData } from './utilities/firebase'; 
 
-import {
-  BrowserRouter,
-  createBrowserRouter, 
-  createRoutesFromElements,
-  Route, 
-  Routes,
-  RouterProvider
-} from 'react-router-dom'
-
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <Route path="/" element={<MainLayout />}>
-//       {/* put more here */}
-//       <Route index element={<FeedPage />}/>
-//       <Route path="publishpage" element={<PublishPage posts={data.posts}/>} />
-//     </Route>
-//   )
-// )
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 const App = () => {
   const [data, error] = useDbData("/");
@@ -34,25 +17,16 @@ const App = () => {
   if (data === undefined) return <h1>Loading data...</h1>;
   if (!data) return <h1>No data found</h1>;
 
-  // const [data, error] = useDbData('/');
-  // console.log(data);
-  // if (data) {
-  //   alert("YES");
-  // } else {
-  //   alert("NO");
-  // }
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           {/* put more here */}
-          <Route index element={<FeedPage />}/>
+          <Route index element={<FeedPage posts={data.posts} />}/>
           <Route path="publishpage" element={<PublishPage posts={data.posts}/>} />
         </Route>
       </Routes>
     </BrowserRouter>
-    // <RouterProvider router={router} data={data}/>
   );
 };
 
