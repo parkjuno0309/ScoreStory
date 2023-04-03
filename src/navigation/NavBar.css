@@ -31,7 +31,7 @@ main {
 }
 
 .main-layout {
-    padding-bottom: 20px
+    padding-bottom: 70px
 }
 
 footer {
@@ -41,7 +41,8 @@ footer {
     right: 0;
     padding: 20px;
     border-radius: 6px;
-    background: rgb(194, 90, 177);
+    background: rgb(230, 173, 221);
+    height: 80px;
 }
 
 footer nav {
@@ -64,5 +65,5 @@ footer nav a{
     margin: 0 20px;
 }
 footer nav a.active {
-   background: rgb(5, 176, 73);
+   background: rgb(144, 200, 243);
 }
