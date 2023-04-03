@@ -1,6 +1,6 @@
 .post {
     padding: 20px;
-    background: rgb(23, 177, 144);
+    background: rgb(198, 239, 241);
     color: black;
     margin: 15px;
     border-radius: 10px; 
@@ -16,4 +16,11 @@
     font-size: 18px;
     padding: 10px;
     font-weight: bold;
+}
+.card-body {
+     background:  rgb(244, 249, 246);
+}
+
+.card-header {
+    background: rgb(194, 90, 177);
 }
