@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import './Post.css';
 
+
 const Post = ({postInfo}) => {
     // information.name, .email, .item, .date, .time
-    console.log(`postInfo: ${postInfo[0]}`);
     return (
+        // replace with a Card from bootstrap instead
         <div className="post">
-            <div>
+            <div className="name-email">
                 {postInfo.name}, {postInfo.email}
             </div>
-            <div>
+            <div className="item">
                 {postInfo.item}
             </div>
             <div>
-                {postInfo.date}, {postInfo.time}
+                {postInfo.date}, {postInfo.startTime}-{postInfo.endTime}
             </div>
         </div>
     )

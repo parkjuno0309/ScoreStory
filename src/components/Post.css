@@ -1,5 +1,19 @@
 .post {
     padding: 20px;
-    background: pink;
+    background: rgb(23, 177, 144);
     color: black;
+    margin: 15px;
+    border-radius: 10px; 
+}
+
+.name-email {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.item {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
 }

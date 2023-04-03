@@ -1,0 +1,72 @@
+{
+    "title": "Posts for lendNU",
+    "posts": {
+        "1": {
+            "id": "1",
+            "name": "Alex Modugno",
+            "email": "AlexModugno2024@u.northwestern.edu",
+            "item": "Calculator",
+            "date": "3/3/23",
+            "startTime": "5",
+            "endTime": "6"
+        },
+        "2": {
+          "id": "2",
+          "name": "Emily",
+          "email": "emily2024@u.northwestern.edu",
+          "item": "Toaster",
+          "date": "3/3/23",
+          "startTime": "5",
+          "endTime": "6"
+        },
+        "3": {
+          "id": "3",
+          "name": "Emily",
+          "email": "emily2024@u.northwestern.edu",
+          "item": "Toaster",
+          "date": "3/3/23",
+          "startTime": "5",
+          "endTime": "6"
+        },
+        "4": {
+            "id": "4",
+            "name": "Emily",
+            "email": "emily2024@u.northwestern.edu",
+            "item": "Toaster",
+            "date": "3/3/23",
+            "time": "5pm-6pm"
+        },
+        "5": {
+            "id": "5",
+            "name": "Emily",
+            "email": "emily2024@u.northwestern.edu",
+            "item": "Toaster",
+            "date": "3/3/23",
+            "time": "5pm-6pm"
+        },
+        "6": {
+            "id": "6",
+            "name": "Emily",
+            "email": "emily2024@u.northwestern.edu",
+            "item": "Toaster",
+            "date": "3/3/23",
+            "time": "5pm-6pm"
+        },
+        "7": {
+            "id": "7",
+            "name": "Emily",
+            "email": "emily2024@u.northwestern.edu",
+            "item": "Toaster",
+            "date": "3/3/23",
+            "time": "5pm-6pm"
+        },
+        "8": {
+            "id": "8",
+            "name": "Emily",
+            "email": "emily2024@u.northwestern.edu",
+            "item": "Toaster",
+            "date": "3/3/23",
+            "time": "5pm-6pm"
+        }
+    }
+}

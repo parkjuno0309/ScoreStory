@@ -1,0 +1,66 @@
+h1 {
+    margin-right: auto;
+    border-bottom: 5px solid rgb(10, 126, 76);
+}
+.nav-bar {
+    padding: 20px;
+    border-radius: 6px;
+    background: rgb(194, 90, 177);
+}
+header nav {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+header nav a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: auto; 
+    font-weight: bold;
+    background: rgb(194, 90, 177);
+}
+header nav a.active {
+    background: green;
+}
+
+main {
+    min-height: calc(100vh-34px);
+}
+
+.main-layout {
+    padding-bottom: 20px
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    border-radius: 6px;
+    background: rgb(194, 90, 177);
+}
+
+footer nav {
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+footer nav a{
+    text-decoration: none;
+    padding: 10px;
+    background: white;
+    color: black;
+    border-radius: 6px;
+    margin-right: auto; 
+    font-weight: bold;
+}
+footer nav a.active {
+    background: green;
+}
