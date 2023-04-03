@@ -7,8 +7,8 @@ const Post = ({postInfo}) => {
     return (
       // replace with a Card from bootstrap instead
       <div className="card mb-3">
-        <h5 className="card-header bg-secondary "> {postInfo.item}</h5>
-        <div className="card-body bg-light">
+        <h5 className="card-header bg-light "> {postInfo.item}</h5>
+        <div className="card-body">
           <h5 className="card-title">{postInfo.name}</h5>
           <p class="card-text">{postInfo.email}</p>
           <p class="card-text">

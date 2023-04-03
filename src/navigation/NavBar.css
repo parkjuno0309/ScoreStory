@@ -23,7 +23,7 @@ header nav a{
     background: rgb(194, 90, 177);
 }
 header nav a.active {
-    background: green;
+    background: rgb(244, 249, 246);
 }
 
 main {
@@ -61,5 +61,5 @@ footer nav a{
     font-weight: bold;
 }
 footer nav a.active {
-    background: green;
+   background: rgb(5, 176, 73);
 }

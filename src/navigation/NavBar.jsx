@@ -16,7 +16,7 @@ const NavBar = () => {
           <Outlet />
         </main>
         <footer>
-          <nav>
+          <nav >
             <NavLink to="/">Feed</NavLink>
             <NavLink to="publishpage">Post</NavLink>
             {/* Put profile here */}
