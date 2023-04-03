@@ -39,13 +39,36 @@ const PostMaker = ({ posts }) => {
         <input className="py-2 mt-2" placeholder="Email" />
         <input className="py-2 mt-2" placeholder="Item" />
         <div className="py-2 mt-2">
-          <label>Date</label>
-          <input type="date" placeholder="Date" />
+          <div className="form-group">
+            <label for="date"> Date </label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              className="form-control"
+              placeholder="Select a date"
+            />
+          </div>
         </div>
         <div className="py-2 mt-2">
-          <label>Time</label>
-          <input className="py-2 mt-2" type="time" placeholder="Start Time" />
-          <input className="py-2 mt-2 ml-3" type="time" placeholder="End Time" />
+          <div className="form-group">
+            <label for="start_time"> Start Time </label>
+            <input
+              className="form-control"
+              type="time"
+              id="start_time"
+              placeholder="Start Time"
+            />
+          </div>
+          <div className="form-group">
+            <label for="end_time"> End Time </label>
+            <input
+              className="form-control"
+              type="time"
+              id="end_time"
+              placeholder="End Time"
+            />
+          </div>
         </div>
         <button className="btn btn-primary" type="submit">
           Post
