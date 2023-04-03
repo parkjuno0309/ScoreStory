@@ -46,10 +46,11 @@ footer {
 
 footer nav {
     display: flex;
-    gap: 5px;
-    justify-content: end;
+    gap: 5px; 
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    width: min-content;
   }
 
 footer nav a{
@@ -60,6 +61,7 @@ footer nav a{
     border-radius: 6px;
     margin-right: auto; 
     font-weight: bold;
+    margin: 0 20px;
 }
 footer nav a.active {
    background: rgb(5, 176, 73);
