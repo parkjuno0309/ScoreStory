@@ -7,9 +7,15 @@ API_KEY = "5dfb1139e28a480d9e3f84f84f340c2b"
 printer = PrettyPrinter()
 
 date = input("Enter date of MLB game: ") # format should be "2017-JUL-31"
+date = input("Enter the team that played on that date: ") # format should be "NYY" or "Yankees" or "New York Yankees"
 
-# we should clean the data above using chatGPT?
+#####
 
+# we should clean the data above using chatGPT here -> return date, team
+
+#####
+
+# Get Game ID
 request_url = f"{BASE_URL}/v3/mlb/stats/json/BoxScores/{date}?key={API_KEY}"
 response = requests.get(request_url)
 
