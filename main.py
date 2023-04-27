@@ -51,3 +51,8 @@ if response2.status_code == 200:
 printer.pprint(pbp_data) # data has statistics of every at bat
 
 #####
+
+# Get major statistics from pbp_data for the game
+    # Homeruns, Hits, strikeouts
+
+#####
