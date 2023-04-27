@@ -7,7 +7,7 @@ API_KEY = "5dfb1139e28a480d9e3f84f84f340c2b"
 printer = PrettyPrinter()
 
 date = input("Enter date of MLB game: ") # format should be "2017-JUL-31"
-date = input("Enter the team that played on that date: ") # format should be "NYY" or "Yankees" or "New York Yankees"
+team = input("Enter the team that played on that date: ") # format should be "NYY"
 
 #####
 
@@ -17,13 +17,31 @@ date = input("Enter the team that played on that date: ") # format should be "NY
 
 # Get Game ID
 request_url = f"{BASE_URL}/v3/mlb/stats/json/BoxScores/{date}?key={API_KEY}"
-response = requests.get(request_url)
+games_data = requests.get(request_url).json()
 
-if response.status_code == 200: # 200 means successful
-    data = response.json()
+print(len(games_data))
 
-printer.pprint(data[0])
+game_id = -1
 
-# data_dict = json.loads(data)
-# keys = data_dict.keys()
-# print(keys)
+for i in range(len(games_data)):
+    if games_data[i]['Game']['HomeTeam'] == team or games_data[i]['Game']['AwayTeam'] == team:
+        desired_game_index = i
+        game_id = games_data[i]['Game']['GameID']
+        break
+
+if game_id == -1:
+    print("Game not found in database")
+else:
+    print(game_id)
+
+#####
+
+# Get play-by-play data for specific game using game_id
+# request_url2 = f"{BASE_URL}/v3/mlb/pbp/json/PlayByPlay/{game_id}?key={API_KEY}"
+# response2 = requests.get(request_url2)
+
+# if response.status_code == 200:
+    # print("successful response")
+    # play_by_play_data = response2.json()
+
+#####
