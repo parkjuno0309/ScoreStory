@@ -17,7 +17,11 @@ team = input("Enter the team that played on that date: ") # format should be "NY
 
 # Get Game ID
 request_url = f"{BASE_URL}/v3/mlb/stats/json/BoxScores/{date}?key={API_KEY}"
-games_data = requests.get(request_url).json()
+response = requests.get(request_url)
+
+if response.status_code == 200:
+    print("successful response")
+    games_data = response.json()
 
 print(len(games_data))
 
@@ -37,11 +41,13 @@ else:
 #####
 
 # Get play-by-play data for specific game using game_id
-# request_url2 = f"{BASE_URL}/v3/mlb/pbp/json/PlayByPlay/{game_id}?key={API_KEY}"
-# response2 = requests.get(request_url2)
+request_url2 = f"{BASE_URL}/v3/mlb/pbp/json/PlayByPlay/{game_id}?key={API_KEY}"
+response2 = requests.get(request_url2)
 
-# if response.status_code == 200:
-    # print("successful response")
-    # play_by_play_data = response2.json()
+if response2.status_code == 200:
+    print("successful response")
+    pbp_data = response2.json()
+
+printer.pprint(pbp_data) # data has statistics of every at bat
 
 #####
