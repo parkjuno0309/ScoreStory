@@ -64,11 +64,19 @@ class Game:
         self.pitching_changes = None
         self.Result = None
 
-    def get_team_name(team_abbreviation):
+    def get_team_name(self,abbreviation):
         request_url3 = f"{BASE_URL}/v3/mlb/scores/json/AllTeams?key={API_KEY}"
         if response2.status_code == 200:
             team_data = response2.json()
             for team in team_data:
+                if(team['Active'] == True):
+                    if(team['Key'] == abbreviation):
+                        return (team['City'] + team['Name'])
+                    
+my_instance = Game('2012-OCT-24', 'DET')
+print(my_instance.get_team_name('DET'))
+
+
 
 
 
