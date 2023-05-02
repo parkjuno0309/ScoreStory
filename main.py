@@ -39,16 +39,33 @@ else:
     print(game_id)
 
 #####
-
+request_url3 = f"{BASE_URL}/v3/mlb/scores/json/AllTeams?key={API_KEY}"
 # Get play-by-play data for specific game using game_id
 request_url2 = f"{BASE_URL}/v3/mlb/pbp/json/PlayByPlay/{game_id}?key={API_KEY}"
-response2 = requests.get(request_url2)
+response2 = requests.get(request_url3)
 
 if response2.status_code == 200:
     print("successful response")
     pbp_data = response2.json()
 
-printer.pprint(pbp_data['Plays'])
+printer.pprint(pbp_data)
+
+
+class Game:
+    # constructor
+    def __init__(self, game_date, team_abbreviatio):
+        self.game_id = game_id
+        self.standings = None
+        self.starting_pitchers = None
+        self.scoring_plays = None
+        self.pitching_changes = None
+        self.Result = None
+        
+    
+    # method
+    def say_hello(self):
+        print(f"Hello, my name is {self.name} and I'm {self.age} years old.")
+
 
 # data has statistics of every at bat
 
