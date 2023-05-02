@@ -6,8 +6,8 @@ BASE_URL = "https://api.sportsdata.io"
 API_KEY = "5dfb1139e28a480d9e3f84f84f340c2b"
 printer = PrettyPrinter()
 
-date = input("Enter date of MLB game: ") # format should be "2017-JUL-31"
-team = input("Enter the team that played on that date: ") # format should be "NYY"
+date = input("Enter date of MLB game:") # format should be "2017-JUL-31"
+team = input("Enter the team that played on that date:") # format should be "NYY"
 
 #####
 
@@ -48,7 +48,9 @@ if response2.status_code == 200:
     print("successful response")
     pbp_data = response2.json()
 
-printer.pprint(pbp_data) # data has statistics of every at bat
+printer.pprint(pbp_data['Plays'])
+
+# data has statistics of every at bat
 
 #####
 
@@ -56,3 +58,5 @@ printer.pprint(pbp_data) # data has statistics of every at bat
     # Homeruns, Hits, strikeouts
 
 #####
+
+##Need to retrieve the team names from the three letter acronyms
