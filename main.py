@@ -51,20 +51,30 @@ if response2.status_code == 200:
 printer.pprint(pbp_data)
 
 
+
+
+
 class Game:
     # constructor
-    def __init__(self, game_date, team_abbreviatio):
+    def __init__(self, game_date, team_abbreviation):
         self.game_id = game_id
         self.standings = None
         self.starting_pitchers = None
         self.scoring_plays = None
         self.pitching_changes = None
         self.Result = None
+
+    def get_team_name(team_abbreviation):
+        request_url3 = f"{BASE_URL}/v3/mlb/scores/json/AllTeams?key={API_KEY}"
+        if response2.status_code == 200:
+            team_data = response2.json()
+            for team in team_data:
+
+
+
         
     
-    # method
-    def say_hello(self):
-        print(f"Hello, my name is {self.name} and I'm {self.age} years old.")
+    
 
 
 # data has statistics of every at bat
