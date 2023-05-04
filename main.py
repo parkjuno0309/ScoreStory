@@ -2,7 +2,8 @@ import requests
 from pprint import PrettyPrinter
 import json
 import re
-from pybaseball import team_ids
+import pandas as pd
+import ssl
 
 
 class Game:
@@ -148,34 +149,29 @@ def print_data(date = '2023-APR-30', team = 'LAD'):
         pattern = r'^\d{4}-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)-\d{2}$'
         return bool(re.match(pattern, date))
     
-    # def check_team_validity(team):
-    #     return team in (team_ids()["teamID"]).tolist()
+    def check_team_validity(team):
+        ssl._create_default_https_context = ssl._create_unverified_context
+        teams = (pd.read_html("https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Baseball/Team_abbreviations")[0][0]).tolist()[1:]
+        return team in teams
     
     if check_date_format(date):
-        # if check_team_validity(team):
-        data = Game(date, team)
-        data.get_pbp()
-        data.home_away()
-        data.get_pitching_data()
-        #data.get_pitching_changes()
-        data.get_result()
-        
-        print(data.Result)
-        print(data.innings_scored)
-        #print(data.pitching_changes)
-        print(data.home_pitchers)
-        print(data.away_pitchers)
-        # else:
-        #     print("Please change team input to format 'MLB'")
+        if check_team_validity(team):
+            data = Game(date, team)
+            data.get_pbp()
+            data.home_away()
+            data.get_pitching_data()
+            #data.get_pitching_changes()
+            data.get_result()
+            
+            print(data.Result)
+            print(data.innings_scored)
+            #print(data.pitching_changes)
+            print(data.home_pitchers)
+            print(data.away_pitchers)
+        else:
+            print("Please change team input to format 'MLB'")
     else:
         print("Please change date input to format 'yyyy-MMM-dd'")
-        
-                    
-#my_instance = Game('2023-APR-30', 'LAD')
-#my_instance.get_pbp()
-#my_instance.home_away()
-#my_instance.get_pitching_data()
-# print(my_instance.game)
 
 print_data()
 
