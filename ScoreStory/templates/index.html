@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Story</title>
+  </head>
+  <body>
+    <h1>Input Form</h1>
+    <form action="/" method="POST">
+      <label for="user_input">Enter your input:</label>
+      <input type="text" id="user_input" name="user_input" required />
+      <button type="submit">Submit</button>
+    </form>
+    {% if response %}
+    <p>{{ response["date"] }}</p>
+    <p>{{ response["team"] }}</p>
+    {% endif %} {% if score %}
+    <p>{{ score["data"] }}</p>
+    {% endif %} {% if narrative %}
+    <p>{{ narrative }}</p>
+    {% endif %}
+  </body>
+</html>
