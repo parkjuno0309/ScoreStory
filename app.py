@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-from gpt import generate_chat_completion
-from score import Game, get_game_prompt
+from utills.gpt import generate_chat_completion
+from utills.score import get_game_prompt
 from datetime import date
 import json
 
