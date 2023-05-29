@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "@emilyfdzhang/config": "^1.1.2"
+  },
+  "prettier": "@emilyfdzhang/config/prettier"
+}

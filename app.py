@@ -4,7 +4,7 @@ from score import Game, get_game_prompt
 from datetime import date
 import json
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 API_KEY_GPT = "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"
 API_ENDPOINT_GPT = "https://api.openai.com/v1/chat/completions"
