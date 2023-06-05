@@ -16,6 +16,10 @@ body {
   padding-top: 15px;
 }
 
+.spacer {
+  height: 20px;
+}
+
 .history {
   display: flex;
   flex-direction: column;
@@ -32,7 +36,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 5px;
-  width: 90%;
+  width: 70%;
   height: 50px;
   font-size: 16px;
 }
@@ -69,6 +73,30 @@ body {
   &p {
     margin: 0 0 10px 0;
   }
+}
+
+.scorestory {
+  max-width: 30px;
+  max-height: 30px;
+  margin-right: 20px;
+  margin-top: 2px;
+}
+
+.user {
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: -5px;
+  margin-right: 20px;
+  margin-top: 2px;
+}
+
+.question {
+  margin-top: 3px;
+}
+
+.icon-holder {
+  display: flex;
+  flex-direction: row;
 }
 
 .input_container {

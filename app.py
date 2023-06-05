@@ -6,9 +6,9 @@ import json
 
 app = Flask(__name__, static_folder='static')
 
-API_KEY_GPT = "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"
-API_ENDPOINT_GPT = "https://api.openai.com/v1/chat/completions"
-
+all_narratives = []
+all_dates = []
+all_teams = []
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -35,9 +35,18 @@ def home():
         response_date = response_data["date"]
         response_team = response_data["team"]
         score = get_game_prompt(response_date, response_team)
-        narrative = generate_chat_completion(score["data"])
-        return render_template('index.html', response=response_data, score=score, narrative=narrative)
-    return render_template('index.html')
+
+        if score:
+            narrative = generate_chat_completion(score["data"])
+            all_narratives.append(narrative)
+        else:
+            narrative = "The game you requested does not exist. Please try again."
+            all_narratives.append(narrative)
+
+        all_dates.append(response_date)
+        all_teams.append(response_team)
+        return render_template('index.html', dates=all_dates, teams=all_teams, narratives=all_narratives)
+    return render_template('index.html', dates=all_dates, teams=all_teams, narratives=all_narratives)
 
 
 # Run the Flask app

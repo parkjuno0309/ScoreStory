@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Score Story</title>
+    <title>ScoreStory</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='icons/baseball.png') }}"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -18,20 +23,38 @@
   <body>
     <div class="history">
       <p class="center">Chat History</p>
-      <div class="history-entry">
-        {% if response %}
+      {% for index in range(dates|length) %}
+      <div class="history-entry" onclick="scrollToNarrative('{{ index }}')">
         <i class="far fa-comment"></i>
-        <span>{{ response["date"], response["team"] }}</span>
-        {% endif %}
+        <span>{{ dates[index] }}, {{ teams[index] }}</span>
       </div>
+      {% endfor %}
     </div>
     <div class="display">
       <div class="result">
         <h1 class="center">ScoreStory</h1>
         <div class="narrative">
-          {% if narrative %}
-          <p>{{ narrative }}</p>
-          {% endif %}
+          {% for index in range(narratives|length) %}
+          <p class="spacer"></p>
+          <div class="icon-holder">
+            <img
+              class="user"
+              src="{{ url_for('static', filename='icons/user.png') }}"
+              alt="User Icon"
+            />
+            <span class="question">Tell me about the <b>{{ teams[index] }}</b>'s game on <b>{{ dates[index] }}</b></span>
+          </div>
+          <p class="spacer"></p>
+          <div class="icon-holder">
+            <img
+              class="scorestory"
+              src="{{ url_for('static', filename='icons/baseball.png') }}"
+              alt="ScoreStory Icon"
+            />
+            <p id="narrative-{{ index }}">{{ narratives[index] }}</p>
+          </div>
+          <p class="spacer"></p>
+          {% endfor %}
         </div>
       </div>
       <div class="input">

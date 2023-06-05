@@ -1,9 +1,9 @@
-document
-  .getElementById('user_input')
-  .addEventListener('keydown', function (event) {
-    if (event === 'enter') {
-      // 13 represents the Enter key
-      event.preventDefault(); // Prevent form submission
-      document.getElementById('chat-form').submit(); // Manually submit the form
-    }
-  });
+'use strict';
+
+function scrollToNarrative(index) {
+  var narrativeId = 'narrative-' + index;
+  var narrativeElement = document.getElementById(narrativeId);
+  if (narrativeElement) {
+    narrativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+}

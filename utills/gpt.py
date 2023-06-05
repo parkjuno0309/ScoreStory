@@ -2,7 +2,7 @@ from flask import request
 import requests
 import json
 
-API_KEY_GPT = "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"
+API_KEY_GPT = "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"
 API_ENDPOINT_GPT = "https://api.openai.com/v1/chat/completions"
 
 
